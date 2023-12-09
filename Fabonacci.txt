@@ -1,0 +1,23 @@
+import java.util.*;
+public class Main 
+{
+    public static void find(int n)
+    {
+        System.out.print(0+" ");
+        System.out.print(1+" ");
+        int first=0;
+        int second=1;
+        for(int i=2;i<n;i++)
+        {
+            int sum = first+second;
+            System.out.print(sum+" ");
+            first=second;
+            second=sum;
+        }
+    }
+    public static void main(String arg[])
+    {
+        int n=7;
+        find(n);
+    }
+}

@@ -1,0 +1,32 @@
+import java.util.*;
+public class Main 
+{
+    public static boolean find(int n)
+    {
+        int original=n;
+        int temp=n;
+        int power=0;
+        int SumOfNumbers=0;
+        while(temp!=0)
+        {
+            power++;
+            temp=temp/10;
+        }
+        while(n!=0)
+        {
+            int number = n%10;
+            SumOfNumbers += Math.pow(number,power);
+            n=n/10;
+        }
+        if(SumOfNumbers==original)
+        {
+            return true;
+        }
+        return false;
+    }
+    public static void main(String arg[])
+    {
+        int n = 153;
+        System.out.print(find(n));
+    }
+}

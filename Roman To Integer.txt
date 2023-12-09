@@ -1,0 +1,53 @@
+": Roman To Integer :"
+
+import java.util.*;
+
+public class Main {
+
+    public static int romanToInt(String s) {
+        // Map to store the values of Roman numerals
+        Map<Character, Integer> romanMap = new HashMap<>();
+        romanMap.put('I', 1);
+        romanMap.put('V', 5);
+        romanMap.put('X', 10);
+        romanMap.put('L', 50);
+        romanMap.put('C', 100);
+        romanMap.put('D', 500);
+        romanMap.put('M', 1000);
+
+        // it store final result
+        int result = 0;
+        // it store previous Roman number value
+        int prevValue = 0;
+
+        for (int i = s.length() - 1; i >= 0; i--) 
+        {
+            char currentChar = Character.toUpperCase(s.charAt(i));
+            int currentValue = romanMap.get(currentChar);
+
+            // compare the current value with the previous value
+            if (currentValue < prevValue) {
+                // if the current value is less than the previous value then subtract it
+                result -= currentValue;
+            } else {
+                // if the current value is greater or equal to the previous value then add it
+                result += currentValue;
+            }
+
+            // here update previous value
+            prevValue = currentValue;
+        }
+
+        // here we get final result
+        return result;
+    }
+
+    public static void main(String[] args) 
+    {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a Roman number: ");
+        String romanNumeral = sc.nextLine();
+        int integerNumber = romanToInt(romanNumeral);
+        System.out.println("Integer value : " + integerNumber);
+    }
+}

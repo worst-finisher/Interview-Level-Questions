@@ -1,0 +1,63 @@
+": Palindrom By String :"
+
+import java.util.*;
+public class Main 
+{
+    public static boolean search(String a)
+    {
+        int i,n=a.length(),m=a.length()-1;
+        for(i=0;i<n/2;i++)
+        {
+            
+            if(a.charAt(i)!=a.charAt(m-i))
+            {
+                return false;
+            }
+        }
+        return true;
+    }
+    public static void main(String arg[])
+    {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter The Content : ");
+        String a = sc.nextLine();
+        System.out.println();
+        boolean result=search(a);
+        if(result==true)
+        {
+            System.out.print("Palindrom");
+        }
+        else 
+        {
+            System.out.print("Not a Palindom");
+        }
+    }
+}
+
+
+
+"------------------------ OR ----------------------------------"
+
+
+import java.util.*;
+public class Main 
+{
+    public static boolean find(String str)
+    {
+        int i,n=str.length()/2,m=str.length()-1;
+        for(i=0;i<n;i++)
+        {
+            if(str.charAt(i)!=str.charAt(m-i))
+            {
+                return false;
+            }
+        }
+        return true;
+    }
+    public static void main(String arg[])
+    {
+        Scanner sc = new Scanner(System.in);
+        String str = sc.nextLine();
+        System.out.print(find(str));
+    }
+}

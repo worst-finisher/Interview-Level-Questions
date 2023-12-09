@@ -1,0 +1,21 @@
+": Length Of Last Word Of A String :"
+
+import java.util.*;
+public class Main 
+{
+    public static void main(String arg[])
+    {
+        int ans=0;
+        Scanner sc = new Scanner(System.in);
+        String str = sc.nextLine();
+        for(int i=str.length()-1;i>=0;i--)
+        {
+            if(str.charAt(i)==' ')
+            {
+                break;
+            }
+            ans++;
+        }
+        System.out.print(ans);
+    }
+}

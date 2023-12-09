@@ -1,0 +1,42 @@
+": Remove Duplicate Elements From Array (Using HashSet) :"
+
+import java.util.*;
+public class Main 
+{
+    public static void solve(int a[])
+    {
+        HashSet<Integer> Unique = new HashSet<>();
+        for(int i=0;i<a.length;i++)
+        {
+            Unique.add(a[i]);
+        }
+        System.out.print("The Unique Numbers are : "+Unique);
+    }
+    public static void main(String arg[])
+    {
+        int a[] = {4, 2, 8, 3, 2, 8, 6, 4, 7};
+        solve(a);
+    }
+}
+
+
+----------------------- OR ------------------------------------------
+
+
+
+: Remove Duplicate Elements From Array (Use Of HashMap) :
+
+
+public static int removeduplicates(int arr[], int n){
+    if (n == 0 || n == 1) {
+        return n;
+    }
+    HashMap<Integer,Integer> map = new HashMap<Integer,Integer>();
+    int j = 0;
+    for (int i=0; i < n; i++) {
+        if (map.containsKey(arr[i])==0) {
+            map.put(arr[i], 1);             arr[j++] = arr[i];
+        }
+    }
+    return j;
+}

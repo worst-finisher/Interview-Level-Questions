@@ -1,0 +1,30 @@
+": Change String Word Hello to Hii :"
+
+public class Main {
+    public static String replaceSubstring(String str, String target, String replacement) {
+        StringBuilder result = new StringBuilder();
+        int index = 0;
+
+        while (index < str.length()) {
+            int nextIndex = str.indexOf(target, index);
+
+            if (nextIndex == -1) {
+                result.append(str.substring(index));
+                break;
+            }
+
+            result.append(str.substring(index, nextIndex));
+            result.append(replacement);
+            index = nextIndex + target.length();
+        }
+
+        return result.toString();
+    }
+
+    public static void main(String[] args) {
+        String str = "hello my name is Ritik";
+        String modifiedStr = replaceSubstring(str, "hello", "hii");
+
+        System.out.println(modifiedStr);
+    }
+}

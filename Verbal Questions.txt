@@ -1,0 +1,20 @@
+1.  Diff.Is or equals to operator
+2.  Encapsulation
+3.  Polymorphism & types
+4.  Abstraction
+5.  Inheritance
+6.  Exception handling- try catch finally
+7.  Checked unchecked 
+8.  Method chaining
+9.  Class chaining
+10. Inner class types 
+11. Annotation
+12. String builder vs string buffer
+13. Serialisation
+14. Big O notation 
+15. Overloading/Overriding
+16. Hashmap
+17. Hashset
+18. Binary search
+19. Your Projects
+20. Your Skills
